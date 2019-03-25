@@ -1,3 +1,7 @@
+create database db_library
+
+go
+
 use db_Library
 go
 
@@ -290,7 +294,7 @@ as
 	from borrower t1
 	inner join book_loans t2 on t2.CardNo=t1.CardNo
 	group by t1.BorrowerName, t1.BorrowerAddress
-	having COUNT(t2.CardNo)<5
+	having COUNT(t2.CardNo)>5
 
 go
 
